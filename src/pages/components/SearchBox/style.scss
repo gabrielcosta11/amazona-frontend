@@ -1,0 +1,26 @@
+.search-form {
+    margin: 0;
+    padding: 0;
+    & > .search-box {
+        display: flex;
+        gap: 0;
+        width: 250px;
+
+        & > input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        & > .default-button {
+            width: 20%;
+            border-radius: 0 5px 5px 0;
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+        }
+    }
+}

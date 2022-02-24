@@ -1,0 +1,13 @@
+.two-field-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .field:first-child {
+        width: 65%;
+    }
+
+    .field:last-child {
+        width: 30%;
+    }
+}

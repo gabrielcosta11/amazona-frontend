@@ -1,0 +1,41 @@
+.order-list {
+    padding: 0;
+    margin: 0;
+
+    & > main {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+    }
+    
+    h3 {
+        margin-top: 30px;
+    }
+    
+    table {
+        width: 100%;
+        border-spacing: 0px;
+        padding: 0px;
+    
+        th, td {
+            border: 1px solid rgba(0, 0, 0, 0.500);
+            padding: 5px 10px;
+            text-align: center;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+    
+        .row {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    }
+}

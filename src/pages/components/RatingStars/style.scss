@@ -1,0 +1,17 @@
+.rating-stars {
+    display: flex;
+    flex-direction: row;
+
+    .star {
+        svg {
+            width: 16px;
+            height: 16px;
+
+            fill: rgb(180, 180, 180);
+        }
+
+        svg.fill {
+            fill: gold;
+        }
+    }
+}

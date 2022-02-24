@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    & > div:first-child {
+        margin-bottom: 0.5rem;
+    }
+
+    .back-home {
+        text-decoration: none;
+
+        &:hover {
+            color: #FF801D;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 80%;
+    max-width: 620px;
+}
+
+.product-info {
+    flex: 1 1 280px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add-cart {
+    flex: 1 1 280px;
+    max-width: 300px;
+    
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+
+        background-color: #F8F8F8;
+        border: 1px solid rgb(136, 136, 136);
+        border-radius: 5px;
+        
+        & > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+        button {
+            background-color: #F0C040;
+
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0.5rem;
+
+            font-size: 16px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:disabled {
+                cursor: auto;
+            }
+        }
+    }
+
+    .price {
+        & > p:last-child {
+            font-size: 20px;
+        }
+    }
+
+    .status {
+        & > p:last-child {
+            color: #20A020;
+        }
+
+        p.sold-off {
+            color: crimson;
+        }
+    }
+
+    .quantity {
+        & > select {
+            padding: 10px;
+            border-radius: 5px;
+
+            font-size: 1rem;
+        }
+    }
+
+    .none {
+        display: none;
+    }
+}
+
+.review-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+
+    & > form {
+        width: 50%;
+
+        select {
+            padding: 10px;
+        }
+
+        textarea {
+            padding: 10px;
+        }
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .review {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 20px;
+
+        .name-and-date {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            .date {
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.500);
+            }
+
+            .name {
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+}
+

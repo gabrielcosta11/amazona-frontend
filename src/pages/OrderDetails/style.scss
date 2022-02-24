@@ -1,0 +1,54 @@
+.order-details {
+    .bold {
+        font-weight: bold;
+    }
+    
+    .title {
+        margin-bottom: 20px;
+    }
+    
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 60%;
+    
+        & > div {
+            width: 100%;
+            background-color: #F8F8F8;
+            border: 1px solid rgba(0, 0, 0, 0.300);
+            border-radius: 5px;
+            padding: 1rem;
+        }
+    }
+    
+    .order-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .item > img {
+        border-radius: 5px;
+    }
+
+    aside {
+        width: 30%;
+        & > .order-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            background-color: #F8F8F8;
+            border: 1px solid rgba(0, 0, 0, 0.300);
+            border-radius: 5px;
+            padding: 1rem;
+    
+            & > div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

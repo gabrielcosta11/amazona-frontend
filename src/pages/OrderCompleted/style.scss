@@ -1,0 +1,22 @@
+.main-oc {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 50px;
+    img {
+        width: 64px;
+    }
+
+    h2 {
+        color: #32BA7C;
+    }
+}
+
+.footer-oc {
+    position: absolute;
+    bottom: 0;
+}
