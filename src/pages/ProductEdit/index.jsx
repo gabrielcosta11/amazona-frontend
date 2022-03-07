@@ -71,23 +71,19 @@ function ProductEdit() {
     const [uploadError, setUploadError] = useState();
     const userSignin = useSelector((state) => state.userSignin)
     const {userInfo} = userSignin
+
     const uploadFileHandler = async (e) => {
-        const file = e.target.files[0];
+        let file = e.target.files[0];
         const bodyFormData = new FormData();
         bodyFormData.append('image', file);
-        console.log(file)
-        console.log(bodyFormData)
+        console.log(file, 'file')
+        console.log(bodyFormData, 'bodyFormData')
 
         try {
             console.log('foi')
             const {data} = await axios.post(
-                '/api/uploads',
-                bodyFormData,
-                {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
-                }
+                '/api/uploads/',
+                bodyFormData
             );
             
             window.alert('sucesso')
@@ -140,7 +136,7 @@ function ProductEdit() {
                             id='image-file'
                             label='Escolha a Imagem'
                             required
-                            onChange={uploadFileHandler}
+                            onChange={(e) => uploadFileHandler(e)}
                         />
                     </div>
                     <div className='field'>

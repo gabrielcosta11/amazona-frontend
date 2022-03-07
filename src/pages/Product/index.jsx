@@ -9,6 +9,7 @@ import "./style.scss"
 import { useEffect, useState } from "react"
 import { PRODUCT_REVIEW_CREATE_RESET } from "../../constants/productConstants"
 import { DefaultButton } from "../components/DefaultButton"
+import { RatingStars } from "../components/RatingStars"
 
 function Product() {
     const history = useHistory()
@@ -84,6 +85,21 @@ function Product() {
                                 <h3>{product.name}</h3>
                                 <p>Preço: R$ {product.price}</p>
                                 <p>Descrição: {product.description}</p>
+                                <div className="rating">
+                                    <p>Avaliação:</p>
+                                    {
+                                        product.numReviews > 0
+                                        ?
+                                        <div className="rating-star">
+                                            <RatingStars
+                                                rating={product.rating}
+                                            />
+                                            <p className='rating-comment'>{product.numReviews} comentários</p>
+                                        </div>
+                                        :
+                                        <p className='rating-comment'>Sem comentários</p>
+                                    }
+                                </div>
                             </div>
                             <div className="add-cart">
                                 <div>
@@ -184,7 +200,7 @@ function Product() {
                                             </p>
                                         </div>
                                         <p>
-                                            {review.rating}
+                                            {<RatingStars rating={review.rating} />}
                                         </p>
                                         <p className="comment">
                                             {review.comment}

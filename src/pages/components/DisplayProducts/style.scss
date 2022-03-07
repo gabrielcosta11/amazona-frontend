@@ -1,0 +1,11 @@
+.display-product {
+    .rating {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .rating-comment {
+        color: rgba(0, 0, 0, 0.500);
+    }
+}
