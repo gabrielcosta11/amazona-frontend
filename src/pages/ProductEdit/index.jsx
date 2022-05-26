@@ -135,7 +135,6 @@ function ProductEdit() {
                             type="file"
                             id='image-file'
                             label='Escolha a Imagem'
-                            required
                             onChange={(e) => uploadFileHandler(e)}
                         />
                     </div>
